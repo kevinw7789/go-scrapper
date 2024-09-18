@@ -35,7 +35,7 @@ func trimAirport(text string) string {
 func main() {
 	var Flights []FlightData
 
-	file, err := os.Create("./output/flights.csv")
+	file, err := os.Create("../output/flights.csv")
 	if err != nil {
 		log.Fatalf("failed creating file: %s", err)
 	}
@@ -112,7 +112,7 @@ func main() {
 
 	//number of entries to check
 	for i := 0; i < 5; {
-		URL := "https://www.flightradar24.com/data/flights/dl" + strconv.Itoa(flightNum)
+		URL := "https://" + strconv.Itoa(flightNum)
 		c.Visit(URL)
 
 		i = i + rand.Intn(max-min) + min

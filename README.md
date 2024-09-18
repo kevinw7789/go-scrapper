@@ -1,0 +1,1 @@
+collection of random tools and scriptlets written in go. made mostly for learning the language.
